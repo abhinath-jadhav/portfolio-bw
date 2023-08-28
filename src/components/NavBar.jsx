@@ -4,6 +4,7 @@ import { CgMenuRight } from "react-icons/cg";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { useSelector, useDispatch } from "react-redux";
 import { changeShowNavbar } from "../redux/navBarSlice";
+import Logo from "../assets/logo1.png";
 
 const NavBar = () => {
   // To connect with redux
@@ -12,29 +13,64 @@ const NavBar = () => {
   const showMobileManu = useSelector((store) => store.navbar);
 
   return (
-    <div className="max-w-[1440px] mx-auto px-4 fixed flex items-center top-0 left-0 right-0 justify-between text-lightColor h-[60px]">
-      <div className="z-20">
-        <p className="text-3xl">Abhinath Jadhav</p>
+    <div className="max-w-[1440px] bg-darkColor2 mx-auto px-4 fixed flex items-center top-0 left-0 right-0 justify-end text-lightColor h-[60px]">
+      <div className="absolute left-4 top-3 z-20 cursor-pointer">
+        <Link smooth={true} duration={700} to="home">
+          <img className="w-[50px]" src={Logo} alt="" />
+        </Link>
       </div>
       <div>
         <ul className="hidden md:flex gap-10 text-xl">
           <li>
-            <Link to="home">Home</Link>
+            <Link
+              className=" cursor-pointer"
+              smooth={true}
+              duration={700}
+              to="home"
+            >
+              Home
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className=" cursor-pointer"
+              smooth={true}
+              duration={700}
+              to="skills"
+            >
+              Skills
+            </Link>
           </li>
           <li>
-            <Link to="about"> About</Link>
+            <Link
+              className=" cursor-pointer"
+              smooth={true}
+              duration={700}
+              to="experiance"
+            >
+              Experience
+            </Link>
           </li>
           <li>
-            <Link to="skill">Skills</Link>
+            <Link
+              className=" cursor-pointer"
+              smooth={true}
+              duration={700}
+              to="project"
+            >
+              Project
+            </Link>
           </li>
           <li>
-            <Link to="experiance">Experience</Link>
-          </li>
-          <li>
-            <Link to="project">Project</Link>
-          </li>
-          <li>
-            <Link to="contact">Contact</Link>
+            <Link
+              className=" cursor-pointer"
+              smooth={true}
+              duration={700}
+              to="contact"
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </div>
@@ -60,6 +96,8 @@ const NavBar = () => {
         <ul className="flex flex-col gap-10 text-2xl text-center">
           <li>
             <Link
+              smooth={true}
+              duration={700}
               to="home"
               onClick={() => dispatch(changeShowNavbar())}
               className=" cursor-pointer"
@@ -69,16 +107,9 @@ const NavBar = () => {
           </li>
           <li>
             <Link
-              to="about"
-              onClick={() => dispatch(changeShowNavbar())}
-              className=" cursor-pointer"
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            <Link
-              to="skill"
+              smooth={true}
+              duration={700}
+              to="skills"
               onClick={() => dispatch(changeShowNavbar())}
               className="   cursor-pointer"
             >
@@ -87,6 +118,8 @@ const NavBar = () => {
           </li>
           <li>
             <Link
+              smooth={true}
+              duration={700}
               to="experiance"
               onClick={() => dispatch(changeShowNavbar())}
               className="cursor-pointer"
@@ -96,6 +129,8 @@ const NavBar = () => {
           </li>
           <li>
             <Link
+              smooth={true}
+              duration={700}
               to="project"
               onClick={() => dispatch(changeShowNavbar())}
               className="cursor-pointer"
@@ -105,6 +140,8 @@ const NavBar = () => {
           </li>
           <li>
             <Link
+              smooth={true}
+              duration={700}
               to="contact"
               onClick={() => dispatch(changeShowNavbar())}
               className="cursor-pointer"
