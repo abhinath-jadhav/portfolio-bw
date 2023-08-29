@@ -4,12 +4,18 @@ import InfoCard from "./child-components/InfoCard";
 import Typed from "react-typed";
 import { HiOutlineDesktopComputer } from "react-icons/hi";
 import { MdSchool } from "react-icons/md";
+import { useSelector } from "react-redux";
 
 const Home = () => {
+  const darkTheme = useSelector((store) => store.darkTheme);
   return (
     <div
       name="home"
-      className="max-w-[1440px] mx-auto h-screen flex justify-center flex-col px-4"
+      className={`${
+        darkTheme
+          ? "bg-darkColor text-lightColor"
+          : "bg-lightColor text-darkColor"
+      } max-w-[1440px] mx-auto h-screen flex justify-center flex-col px-4`}
     >
       <div className="flex flex-col items-center justify-center">
         <div className="flex flex-col items-center">

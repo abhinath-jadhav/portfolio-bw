@@ -3,10 +3,7 @@ const navbarSlice = createSlice({
   name: "navbar",
   initialState: false,
   reducers: {
-    changeShowNavbar: (state) => {
-      console.log("test");
-      return !state;
-    },
+    changeShowNavbar: (state) => !state,
   },
 });
 

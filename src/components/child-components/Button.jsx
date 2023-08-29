@@ -1,13 +1,14 @@
 import React from "react";
 
 const Button = (props) => {
-  const darkStyle = "text-lightColor bg-darkColor2 border border-lightColor";
+  const darkStyle = "text-lightColor bg-darkColor border border-lightColor";
   const lightStyle = "bg-lightColor border border-black text-darkColor";
   const defaultWidth = "130px";
 
   const hoverDark =
-    "hover:bg-slate-600 hover:border hover:border-lightColor hover:text-lightColor";
-  const hoverLight = "hover:text-darkColor2 hover:border hover:bg-lightColor";
+    "hover:bg-darkColor hover:border hover:border-lightColor hover:text-lightColor";
+  const hoverLight =
+    "hover:text-darkColor hover:border bg:border-darkColor hover:bg-lightColor";
 
   return (
     <div>
